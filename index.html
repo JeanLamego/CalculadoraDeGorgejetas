@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    
-    <title>Calculadora de Gorjetas</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/reset.css">
+   
+   <title>Calculadora de Gorjetas</title>
 </head>
 <body>
-    <div class="container-card">
-        <div class="input-informations">
-            <div class="bill">
-                <label for="bill" class="bill-title">Valor da Conta</label><br>
-                <input type="text" id="bill" class="bill-input" placeholder="R$ 0,00">
-                
-                <div class="tip-selector">
-                    <table>
-                        <p class="tip-title">Escolha a gorjeta</p>
-                        <tr>
-                            <td><button class="tip-buttons">5%</button></td>
-                            <td><button class="tip-buttons">10%</button></td>
-                            <td><button class="tip-buttons">15%</button></tr>
-                            </tr>
-                            <tr>
-                                <td><button class="tip-buttons">25%</button></td>
-                                <td><button class="tip-buttons">50%</button></td>
-                                <td><button class="tip-buttons">Custom</button></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <label for="number-of-people" class="number-of-people-title">Quantidade de Pessoas</label><br>
-                    <input type="text" id="number-of-people" class="number-of-people-input">
-                </div>
-                
+   <div class="container-card">
+      <div class="input-informations">
+         <div class="bill">
+            <label for="bill" class="bill-title">Valor da Conta</label><br>
+            <input type="text" id="bill" class="bill-input" placeholder="R$ 0,00">
+            
+            <div class="tip-selector">
+               <table>
+                  <p class="tip-title">Escolha a gorjeta</p>
+                  <tr>
+                     <td><button class="tip-buttons" id="5%" onclick="calcularGorjeta()" value="">5%</button></td>
+                     <td><button class="tip-buttons" id="10%">10%</button></td>
+                     <td><button class="tip-buttons" id="15%">15%</button></tr>
+                     </tr>
+                     <tr>
+                        <td><button class="tip-buttons" id="25%">25%</button></td>
+                        <td><button class="tip-buttons"id="50%">50%</button></td>
+                        <td><button class="tip-buttons-custom" id="custom-btn">Custom</button></td>
+                     </tr>
+                  </table>
+               </div>
+               <label for="number-of-people" class="number-of-people-title">Quantidade de Pessoas</label><br>
+               <input type="number" id="number-of-people" class="number-of-people-input" placeholder="0">
             </div>
-            <div class="results">
-                <div class="tip-amount">
-                    <p class="tip-amount-title">Gorjetas<br>por pessoa</p>
-                    <h2 class="tip-amount-result">R$12,50</h2>
-                </div>  
-                <div class="total">
-                    <p class="total-title">Gorjetas<br>por pessoa</p>
-                    <h2 class="total-result">R$12,50</h2>
-                </div> 
-                <button class="reset-button">Limpar</button> 
+            
+         </div>
+         <div class="results">
+            <div class="results-info">
+               <div class="tip-amount">
+                  <p class="tip-amount-title">Gorjetas<br><span class="span">Por pessoa</span></p>
+                  <h2 class="tip-amount-result">R$12,50</h2>
+               </div>  
+               <div class="total">
+                  <p class="total-title">Total<br><span class="span">Por pessoa</span></p>
+                  <h2 class="total-result">R$12,50</h2>
+               </div> 
             </div>
-          
-        </div>
-    </div>    
+               <button class="reset-button" id="reset-button">Limpar</button> 
+            
+         </div>
+         
+      </div>
+   </div>    
 </body>
-    
-    <script src="./js/main.js"></script>
-    </html>
+
+<script src="./js/main.js"></script>
+</html>
