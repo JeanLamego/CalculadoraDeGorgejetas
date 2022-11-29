@@ -1,6 +1,69 @@
+*{
+    font-family: 'Space Mono', monospace;
+}
 body {
+    
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+.container-card{
+    border: 1px solid red;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 2em; 
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+
+.bill, .results{
+    border: 1px solid orange;
+    padding: 2em ;
+    border-radius: 10px;
+    height: 14em;
+}
+
+
+.results{
+    
+    border: 1px solid blue;
+    
+    
+}
+.bill-title,.tip-title,.number-of-people-title{
+    font-size: .8em;
+    font-weight: 700;
+    color: hsl(184, 14%, 56%);
+    margin: 1em 0;
+    
+}
+.bill-input, .number-of-people-input{
+    border:none;
+    border-radius: 2px;
+    background:hsl(180, 6%, 70%);
+    width: 100%;
+    text-align: right;
+    margin: .4em 0;
+    padding:.2em 0;
+    font-weight: 700;
+    font-size: 1.08em;
+    color: hsl(183, 100%, 15%);
+}
+.tip-buttons{
+    background: hsl(183, 100%, 15%);
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    width: 5em;
+    height: 2em;
+    margin: .3em;
+    font-size: 1em;
+    outline: none;
+
 }

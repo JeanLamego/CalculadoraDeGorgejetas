@@ -2,7 +2,7 @@
 Projeto de calculadora de gorjetas inspirado no desafio do FrontEndMentor para meu terceiro projeto do código todo dia
 
 ### Objetivos
--[] Criar HTML
+-[x] Criar HTML
 -[] Criar CSS
 
 
