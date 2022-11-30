@@ -3,11 +3,20 @@
 //     console.log(bill);
 // }
 
-function calcularGorjeta(){
+
+
+
+
+
+function valorDaConta(){
     var gorjeta = document.getElementById("bill").value;
-        
-    alert("valor da conta" + gorjeta);
-}
+    if (gorjeta>0){
+        alert(gorjeta);
+    }else{
+        alert("Você precisar por um valor maior que Zero")
+    }
+   
+};
 
 function numberOfPeople(){
     var quantidade= document.getElementById("number-of-people").value;
@@ -16,4 +25,10 @@ function numberOfPeople(){
     }else{
         alert("A quantidade de pessoas não pode ser menor que 1");
     }
-}
+};
+
+// function calcularGorjeta(){
+    
+//         ((valorDaConta()*0.05)/numberOfPeople());
+//     console.log(calcularGorjeta());
+// }
