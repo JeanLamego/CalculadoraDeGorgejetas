@@ -8,18 +8,21 @@
 
 
 
-function valorDaConta(){
+
+
+const valorDaConta = function (){
     var gorjeta = document.getElementById("bill").value;
     if (gorjeta>0){
         alert(gorjeta);
     }else{
         alert("Você precisar por um valor maior que Zero")
     }
+    // return gorjeta;
    
 };
 
-function numberOfPeople(){
-    var quantidade= document.getElementById("number-of-people").value;
+numberOfPeople = function (){
+    var quantidade = document.getElementById("number-of-people").value;
     if (quantidade>0){
         alert(quantidade);
     }else{
@@ -27,8 +30,8 @@ function numberOfPeople(){
     }
 };
 
-// function calcularGorjeta(){
+    function calcularGorjeta(){
+    var calcular= numberOfPeople(quantidade)*valorDaConta(gorjeta);
     
-//         ((valorDaConta()*0.05)/numberOfPeople());
-//     console.log(calcularGorjeta());
-// }
+ console.log(calcular);
+    }
