@@ -24,14 +24,14 @@
                <table>
                   <p class="tip-title">Escolha a gorjeta</p>
                   <tr>
-                     <td><button class="tip-buttons" id="5%" onclick="valorDaConta()" >5%</button></td>
-                     <td><button class="tip-buttons" id="10%">10%</button></td>
-                     <td><button class="tip-buttons" id="15%">15%</button></tr>
+                     <td><button class="tip-buttons" id="5%" onclick="calcularGorjeta(5)" >5%</button></td>
+                     <td><button class="tip-buttons" id="10%" onclick="calcularGorjeta(10)">10%</button></td>
+                     <td><button class="tip-buttons" id="15%" onclick="calcularGorjeta(15)">15%</button></tr>
                      </tr>
                      <tr>
-                        <td><button class="tip-buttons" id="25%">25%</button></td>
-                        <td><button class="tip-buttons"id="50%">50%</button></td>
-                        <td><button class="tip-buttons-custom" id="custom-btn" onclick="numberOfPeople()">Custom</button></td>
+                        <td><button class="tip-buttons" id="25%" onclick="calcularGorjeta(25)">25%</button></td>
+                        <td><button class="tip-buttons"id="50%" onclick="calcularGorjeta(50)">50%</button></td>
+                        <td><button class="tip-buttons-custom" id="custom-btn" onclick="calcularGorjeta()">Custom</button></td>
                      </tr>
                   </table>
                </div>
@@ -57,7 +57,8 @@
          
       </div>
    </div>    
+   <script src="./js/main.js"></script>
 </body>
 
-<script src="./js/main.js"></script>
+
 </html>
