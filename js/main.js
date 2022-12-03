@@ -21,6 +21,7 @@
   
   const gorjeta = document.getElementById("bill");
   const quantidade = document.getElementById("number-of-people");
+  const clearFields= document.querySelector('#reset-button');
   
   
   function valorDaConta(){    
@@ -47,10 +48,24 @@ function calcularGorjeta(porcentagem){
     var tipsPerPerson = document.querySelector(".tip-amount-result");
     tipsPerPerson.innerHTML="R$" + valorGorjeta.toFixed(2);
     // console.log("Valor da Gorjeta " + valorGorjeta);
-
+    
     var totalPerPerson = document.querySelector(".total-result");
     totalPerPerson.innerHTML="R$" + totalPorPessoa.toFixed(2);
     return valorGorjeta;
+};
+
+function clearResults(){
+    
+    var resetButton = clearFields.addEventListener('click', function(){
+        var resetGorjeta = gorjeta.value='';
+        var resetQuantidade = quantidade.value='';
+        var tipsPerPerson = document.querySelector(".tip-amount-result");
+        tipsPerPerson.innerHTML="R$ " + 0;
+        var totalPerPerson = document.querySelector(".total-result");
+        totalPerPerson.innerHTML="R$ " + 0;
+        
+        
+    });
     
 };
 

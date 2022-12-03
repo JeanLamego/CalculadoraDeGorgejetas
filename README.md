@@ -14,6 +14,8 @@ Projeto de calculadora de gorjetas inspirado no desafio do FrontEndMentor para m
 -[x] Criar função para escolher a gorjeta para calcular
 -[] Criar função do botão custom com uma tela de alerta para o usuário alterar 
 
+-[] Criar responsividade para o mobile
+
 
 ### Extra
 -[] Fazer dois temas de Background no projeto
