@@ -17,12 +17,13 @@
    <div class="container-card">
       <div class="input-informations">
          <div class="bill">
-            <label for="bill" class="bill-title">Valor da Conta</label><br>
-            <input type="number" id="bill" class="bill-input" placeholder="R$ 0,00">
+            <label for="bill" class="bill-title">Valor da Conta</label>
+            <input type="number" id="bill" class="bill-input" placeholder="R$ 0,00" required>
             
             <div class="tip-selector">
                <table>
                   <p class="tip-title">Escolha a gorjeta</p>
+                  
                   <tr>
                      <td><button class="tip-buttons" id="5%" onclick="calcularGorjeta(5)" >5%</button></td>
                      <td><button class="tip-buttons" id="10%" onclick="calcularGorjeta(10)">10%</button></td>
@@ -35,8 +36,11 @@
                      </tr>
                   </table>
                </div>
-               <label for="number-of-people" class="number-of-people-title">Quantidade de Pessoas</label><br>
-               <input type="number" id="number-of-people" class="number-of-people-input" placeholder="0">
+               <div class="people-label">
+                  <label for="number-of-people" class="number-of-people-title">Quantidade de Pessoas</label>
+                  <label for="" class="error">O valor não pode ser Zero</label>
+               </div>
+               <input type="number" id="number-of-people" class="number-of-people-input" placeholder="1" value="1">
             </div>
             
          </div>
@@ -44,11 +48,11 @@
             <div class="results-info">
                <div class="tip-amount">
                   <p class="tip-amount-title">Gorjetas<br><span class="span">Por pessoa</span></p>
-                  <h2 class="tip-amount-result">R$12,50</h2>
+                  <h2 class="tip-amount-result">R$ 0,00</h2>
                </div>  
                <div class="total">
                   <p class="total-title">Total<br><span class="span">Por pessoa</span></p>
-                  <h2 class="total-result">R$12,50</h2>
+                  <h2 class="total-result">R$ 0,00</h2>
                </div> 
             </div>
             

@@ -17,7 +17,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;  
     gap: 2em; 
- /*    width: auto;
+    /*    width: auto;
     height: auto; */
     margin: 0 auto;
     padding: 2em;
@@ -25,13 +25,22 @@ body {
 
 
 .bill, .results{
-   
+    
     padding: 2em ;
     border-radius: 10px;
-    height: 14em;
+    /* height: 14em; */
+    
+}
+.bill{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
 }
 
+
 .bill-title,.tip-title,.number-of-people-title{
+    /* display:inline-block; */
     font-size: .8em;
     font-weight: 700;
     color: hsl(184, 14%, 56%);
@@ -39,7 +48,8 @@ body {
     
 }
 .bill-input, .number-of-people-input{
-    border:none;
+    
+    border:1px solid white;
     border-radius: 2px;
     background:hsl(180, 6%, 70%);
     width: 100%;
@@ -50,17 +60,41 @@ body {
     font-size: 1.08em;
     color: hsl(183, 100%, 15%);
 }
+.people-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.error{
+    
+    font-size: .8em;
+    font-weight: 700;
+    color: red;
+    display: none;
+    
+}
+
 .tip-buttons, .tip-buttons-custom{
     background: hsl(183, 100%, 15%);
     color: white;
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
     border: none;
-    width: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     height: 2em;
     margin: .3em;
-    font-size: 1em;
+    font-size: 1.1em;
     outline: none;
+}
+.tip-selector {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
 }
 
 .tip-buttons-custom{
