@@ -37,11 +37,11 @@ function numberOfPeople(){
     var inputQuantidade = quantidade.value;
     
     if(inputQuantidade<1){
-        quantidade.style.borderColor= "thick solid red";
+        quantidade.style.border= "thick solid red";
         error.style.display="flex";
     
     }else{
-        quantidade.style.borderColor= "none";
+        quantidade.style.border= "none";
         error.style.display="none";
         return inputQuantidade;
     }
