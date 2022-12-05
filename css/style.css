@@ -2,7 +2,7 @@
     font-family: 'Space Mono', monospace;
 }
 body {
-    background:linear-gradient(180deg,hsl(180, 66%, 65%), hsl(189, 41%, 97%) );
+    background:linear-gradient(180deg,hsla(180, 57%, 74%, 0.8), hsl(189, 41%, 97%) );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,9 +54,9 @@ body {
 }
 .bill-input, .number-of-people-input{
     
-    border:1px solid white;
-    border-radius: 2px;
-    background:hsl(180, 6%, 70%);
+    border:1px solid rgba(172, 166, 166, 0.158);
+    border-radius: 6px;
+    background:hsl(180, 18%, 91%);
     width: 100%;
     text-align: right;
     margin: .4em 0;
@@ -174,4 +174,58 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: scale(1.05);
     transition:transform 0.3s;
     
+}
+
+@media only screen and (max-width: 845px){
+  
+  
+    .container-card{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+    
+        height: 80vh;
+        margin: 0 2vw;
+
+        }
+        .input-informations{
+            width:100%;
+            height: 50vh;
+            
+        }
+        .bill-input, .number-of-people-input{
+            margin: 1em 0;
+        }
+        .bill{
+            text-align: left;
+        }
+        .bill-title, .tip-title, .number-of-people-title{
+            margin: 0.5em 0;
+            font-size: 1.1em;
+            text-align: left;
+        }
+        .tip-box{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-size: 1.3em;
+        }
+        .tip-amount-title, .total-title{
+            font-size: 1em;
+        }
+        .results{
+            height: 80%
+        }
+        .results h2{
+            font-size: 2em;
+            
+        }
+        .bill{
+            padding: 0;
+        }
+        .reset-button{
+            padding: .7em 2em;
+            margin-top: 1em;
+        }
+
 }
