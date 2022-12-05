@@ -23,6 +23,27 @@
   const quantidade = document.getElementById("number-of-people");
   const clearFields= document.querySelector('#reset-button');
   const error= document.querySelector('.error');
+  const customButton= document.querySelector('#custom-btn');
+  const porcentagemCustom=document.querySelector('tip-custom');
+
+  var tipsPerPerson = document.querySelector(".tip-amount-result");
+  var totalPerPerson = document.querySelector(".total-result");
+
+  customButton.addEventListener("input", function(){
+    if(gorjeta.value == "" || quantidade.value == ""){
+        totalPerPerson.innerHTML = "0";
+        tipsPerPerson.innerHTML = "0";
+
+    }else{
+        var calculo = parseFloat(Number(customButton.value)/100 * Number(gorjeta.value));
+        totalPerPerson.innerHTML =  "R$" + calculo.toFixed(2);
+   
+         var porPessoa = (Number(calculo) / Number(quantidade.value));
+        tipsPerPerson.innerHTML = "R$" + porPessoa.toFixed(2) ;
+    }  
+  });
+ 
+
   
   
   function valorDaConta(){    
@@ -31,7 +52,7 @@
     if (inputGorjeta >0){
         return inputGorjeta;
     }else
-    return alert("erro");
+    return alert("O valor da conta não pode estar vazio");
 };
 function numberOfPeople(){
     var inputQuantidade = quantidade.value;
@@ -54,23 +75,26 @@ function calcularGorjeta(porcentagem){
     // console.log("Quantidade de Pessoas " + numberOfPeople());
     let valorGorjeta = valorDaConta() * (Number(porcentagem)/100) / numberOfPeople();
     let totalPorPessoa = valorDaConta()/ numberOfPeople();
-    var tipsPerPerson = document.querySelector(".tip-amount-result");
+    
     tipsPerPerson.innerHTML="R$" + valorGorjeta.toFixed(2);
     // console.log("Valor da Gorjeta " + valorGorjeta);
     
-    var totalPerPerson = document.querySelector(".total-result");
+    
     totalPerPerson.innerHTML="R$" + totalPorPessoa.toFixed(2);
     return valorGorjeta;
 };
+
 
 function clearResults(){
     
     var resetButton = clearFields.addEventListener('click', function(){
         var resetGorjeta = gorjeta.value='';
         var resetQuantidade = quantidade.value='1';
-        var tipsPerPerson = document.querySelector(".tip-amount-result");
+
+    
         tipsPerPerson.innerHTML="R$ " + 0;
-        var totalPerPerson = document.querySelector(".total-result");
+
+        
         totalPerPerson.innerHTML="R$ " + 0;
         
         

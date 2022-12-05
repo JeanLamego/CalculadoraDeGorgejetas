@@ -16,11 +16,19 @@ body {
     border-radius: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;  
-    gap: 2em; 
+    /* gap: 2em;  */
     /*    width: auto;
     height: auto; */
-    margin: 0 auto;
+    margin: 0 30vw;
     padding: 2em;
+}
+
+.input-informations{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    width:450px ;
 }
 
 
@@ -32,10 +40,7 @@ body {
     
 }
 .bill{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0;
+  
 }
 
 
@@ -73,6 +78,10 @@ body {
     display: none;
     
 }
+.tip-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 .tip-buttons, .tip-buttons-custom{
     background: hsl(183, 100%, 15%);
@@ -101,6 +110,7 @@ body {
     background-color: hsl(180, 18%, 91%);
     color:hsl(184, 14%, 56%);
     font-weight: 700;
+    text-align: center;
 }
 .tip-buttons:hover, .tip-buttons-custom:hover{
     background-color:hsl(172, 67%, 45%);
