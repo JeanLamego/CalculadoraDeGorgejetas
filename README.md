@@ -20,6 +20,7 @@ Projeto de uma Calculadora de gorjetas com o intuito de praticar minha lógica e
 <p align="center">
   <img alt="Calculadora de gorjetas no celular" src="https://user-images.githubusercontent.com/112256751/205777321-9e0f8968-25c1-4688-93f3-03c900aa50d7.JPG" width="30%"/>
 </p>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
